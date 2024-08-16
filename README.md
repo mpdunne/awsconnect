@@ -1,7 +1,7 @@
 # AWS-Connect
 Quick bash/awscli functions for connecting to AWS instances by instance IDs.
 
-To "install", clone the repo and add `source <clone dir>/awsconnect/awsconnect.sh` to your startup scripts (e.g. `.bashrc`, `.zshrc` or `.zshenv `), and then `source` it.
+To "install", clone the repo somewhere and add `source <clone dir>/awsconnect/awsconnect.sh` to one of your startup scripts (e.g. `.bashrc`, `.zshrc` or `.zshenv `). Then run `source` on that file to start using AWS-Connect immediately!
 
 ## Requirements
 - AWS CLI installed and configured.
