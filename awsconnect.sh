@@ -12,8 +12,9 @@ function awsstart {
 function awsconnect {
         key_file=$1
         public_dns=$2
+        shift 2
         echo "Connecting to ${public_dns}"
-        ssh -i $key_file "ubuntu@${public_dns}"
+        ssh -i $key_file "$@" "ubuntu@${public_dns}"
 }
 
 function awsgetdns {
@@ -32,6 +33,7 @@ function awsgo {
         key_file=$1
         region=$2
         instance_id=$3
+        shift 3
 
         echo "Getting the ip address..."
         public_dns=$(awsgetdns $region $instance_id)
@@ -44,6 +46,6 @@ function awsgo {
         if [[ "$public_dns" == "" ]]; then
                 echo "Could not get the ip address of ${instance_id}, it is not reachable."
         else
-                awsconnect $key_file $public_dns
+                awsconnect $key_file $public_dns "$@"
         fi
 }
