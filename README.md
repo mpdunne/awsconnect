@@ -11,7 +11,7 @@ To "install", clone the repo somewhere and add `source <clone dir>/awsconnect/aw
 ## Easy usage
 
 To connect to an instance (and start it if it's turned off):
-`awsgo <key_file> <region> <instance_id>`
+`awsgo <key_file> <user> <region> <instance_id>`
 
 ## Advanced usage
 
@@ -25,4 +25,4 @@ To get the public DNS of an instance by its Name tag:
 `awsgetdnsbyname <region> <name>`
 
 To connect to an EC2 instance using the public DNS:
-`awsconnect <key_file> <public_dns>`
+`awsconnect <key_file> <user> <public_dns>`
