@@ -16,7 +16,8 @@ function awsstart {
 
         echo "Current state: $state"
 	if [ "$state" = "running" ]; then
-            echo "Instance is running."
+            echo "Instance successfully started"
+            sleep 2
             break
         fi
 
